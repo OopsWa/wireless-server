@@ -10,9 +10,14 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 router.post('/postVibData', function(req, res, next) {
-  var value=req.body;
+  var body=req.body;
   console.log(value);
+  var recordtime=new Date().getTime();
+
   var value={
+      vibAmpl: body.vib_ampl,
+      vibAfreq: body.vib_freq,
+      vibVelo: body.vib_velo,
 
   }
 });
