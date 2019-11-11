@@ -34,7 +34,7 @@ router.post('/postVibData', function(req, res, next) {
 
 
 
-router.get('/getVibData', function(req, res, next) {
+router.get('/getVibData/', function(req, res, next) {
 
 var sql ="SELECT * FROM vibdata ORDER BY \"recordTime\" DESC";
 db.select(sql,function(err,result){
